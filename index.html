@@ -15,7 +15,6 @@
         const ctx = document.getElementById('graficoProfesores').getContext('2d');
 
         const data = {
-            // Los profesores serán nuestro eje vertical (Y)
             labels: [
                 'Pablo Domínguez González',
                 'Leonardo Soto Calquín',
@@ -23,7 +22,7 @@
                 'Sebastián Pagueguy Fenner',
                 'Gabriela Pradenas Guentherodt'
             ],
-            // Cada dataset representa una tendencia (las barras agrupadas)
+            
             datasets: [
                 {
                     label: 'Ecología Materialidad y Futuros',
@@ -64,14 +63,14 @@
         };
 
         const config = {
-            type: 'bar', // En Chart.js, las barras horizontales usan tipo 'bar'
+            type: 'bar', 
             data: data,
             options: {
-                indexAxis: 'y', // <-- CLAVE: Esto vuelve las barras horizontales
+                indexAxis: 'y', 
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'top', // Posición de las leyendas de tendencias
+                        position: 'top', 
                     },
                     title: {
                         display: true,
@@ -90,7 +89,6 @@
             }
         };
 
-        // Renderizar el gráfico
         new Chart(ctx, config);
     </script>
 </body>
